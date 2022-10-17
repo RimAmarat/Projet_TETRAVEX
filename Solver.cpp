@@ -88,16 +88,16 @@ void Solver::threadCards(int numThreads){
     while(currentCard < numThreads)
     {
         pool.addThread(new std::thread(&Solver::makeThread, this, this->game));
-        pool.m->lock();
         currentCard++;
-        std::cout << "current card " << currentCard << std::endl;
-        pool.m->unlock();
+
     }
 
 }
 void Solver::makeThread(Game game){
     Game gameCopy = game.copy();
+    gameCopy.removePiece(0,0);
     gameCopy.move(gameCopy.cards[currentCard], 0, 0);
+    std::cout << "current card " << currentCard << std::endl;
     recursiveBruteforceP(0, 1, gameCopy);
 }
 
@@ -105,7 +105,7 @@ void Solver::parallelBacktracking(int num_threads){
 
     start = std::chrono::high_resolution_clock::now();
     threadCards(num_threads);
-    pool.joinThreads();
+    pool.exec();
 
 }
 

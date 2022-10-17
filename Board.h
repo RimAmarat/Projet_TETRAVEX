@@ -17,8 +17,8 @@ public:
     Board(int size);
     Board();
     void display();
-    Card getPieceAt(int x, int y);
-    void removePiece(int x, int y);
+    Card getCardAt(int x, int y);
+    void removeCard(int x, int y);
     bool placeCard(Card c, int x, int y);
     bool placable(Card card, int x, int y);
 

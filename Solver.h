@@ -27,7 +27,6 @@ public:
     void recursiveBruteforceP(int x, int y, Game &game);
     void parallelBacktracking(int num_threads);
     void makeThread(Game game);
-
     void sequentialBacktrackingP();
 
     //void sequentialBacktracking(Game game);

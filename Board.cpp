@@ -37,11 +37,11 @@ Board::Board(int size){
 
 }
 
-Card Board::getPieceAt(int x, int y){
+Card Board::getCardAt(int x, int y){
     return this->grid[x][y];
 }
 
-void Board::removePiece(int x, int y){
+void Board::removeCard(int x, int y){
     this->grid[x][y] = Card();
 
 }
@@ -82,7 +82,6 @@ bool Board::placeCard(Card card, int x, int y){
         grid[x][y] = card;
         return true;
     }
-
     //cout << "Move impossible"<<endl;
     return false;
 }
@@ -91,13 +90,13 @@ bool Board::placeCard(Card card, int x, int y){
 void Board::display() {
     for(int i = 0; i < this->size; i++) {
         for(int j = 0; j < this->size; j++)
-            std::cout << ".--" << getPieceAt(i, j).top << "--." ;
+            std::cout << ".--" << getCardAt(i, j).top << "--." ;
         std::cout << std::endl;
         for(int j = 0; j < this->size; j++)
-            std::cout << "|" << getPieceAt(i, j).left << "   " << getPieceAt(i, j).right << "|";
+            std::cout << "|" << getCardAt(i, j).left << "   " << getCardAt(i, j).right << "|";
         std::cout << std::endl;
         for(int j = 0; j < this->size; j++)
-            std::cout << ".__" << getPieceAt(i, j).bottom << "__." ;
+            std::cout << ".__" << getCardAt(i, j).bottom << "__." ;
         std::cout << std::endl;
         std::cout << "---------------------" << std::endl;
     }

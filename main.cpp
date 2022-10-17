@@ -10,9 +10,9 @@ class Game; // forward declaration
 
 int main(){
 
-    Game game = Game("./entree5.txt");
+    Game game = Game("./entree6.txt");
     Solver solver = Solver(game);
-    solver.parallelBacktracking(25);
+    solver.parallelBacktracking(20);
 
 
 //game.displayBoard();

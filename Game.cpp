@@ -54,9 +54,9 @@ void Game::addPiece(Card p){
 }
 
 void Game::removePiece(int x, int y){
-    Card card = board.getPieceAt(x, y);
+    Card card = board.getCardAt(x, y);
     if(card.bottom != -1){
-        board.removePiece(x, y);
+        board.removeCard(x, y);
         card.setPlaced(false);
         //std::cout << "Before adding this card" ;
         //card.display();
@@ -115,8 +115,8 @@ void Game::removeFromCards(Card card){
 
 Game Game::copy(){
     Game copy = Game();
-    copy.size = this->size;
-    copy.board = Board(this->size);
+    copy.size = size;
+    copy.board = *new Board(this->size);
     for (int i = 0; i< this->cards.size(); i++)
     {
         copy.cards.push_back(this->cards[i].CardCopy());

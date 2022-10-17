@@ -1,0 +1,16 @@
+//
+// Created by rim on 10/17/22.
+//
+
+#ifndef PROJET_TETRAVEX_SEQUENTIALBACKTRACKING_H
+#define PROJET_TETRAVEX_SEQUENTIALBACKTRACKING_H
+
+
+class SequentialBacktracking {
+
+
+
+};
+
+
+#endif //PROJET_TETRAVEX_SEQUENTIALBACKTRACKING_H

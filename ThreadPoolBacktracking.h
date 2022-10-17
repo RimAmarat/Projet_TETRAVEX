@@ -1,0 +1,14 @@
+//
+// Created by rim on 10/17/22.
+//
+
+#ifndef PROJET_TETRAVEX_THREADPOOLBACKTRACKING_H
+#define PROJET_TETRAVEX_THREADPOOLBACKTRACKING_H
+
+
+class ThreadPoolBacktracking {
+
+};
+
+
+#endif //PROJET_TETRAVEX_THREADPOOLBACKTRACKING_H
